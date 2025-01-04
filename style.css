@@ -276,9 +276,7 @@ button img{
     display: block;
   }
 
-  .dropdown:hover .dropbtn {
-   /* background-color: black; */
-  }
+  
 
   .dropdown-toggle {
     cursor: pointer;
