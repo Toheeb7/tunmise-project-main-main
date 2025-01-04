@@ -1,0 +1,285 @@
+*{
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: font;
+    src: url(./public/font/kSans.ttf);
+}
+
+:root{
+    --Orange: hsl(26, 100%, 55%);
+--Pale-orange: hsl(25, 100%, 94%);
+
+
+
+--Very-dark-blue: hsl(220, 13%, 13%);
+--Dark-grayish-blue: hsl(219, 9%, 45%);
+--Grayish-blue: hsl(220, 14%, 75%);
+--Light-grayish-blue: hsl(223, 64%, 98%);
+--White: hsl(0, 0%, 100%);
+--Black : hsl(0, 0%, 0%);
+
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+body{
+    font-family: font;
+}
+
+
+
+nav{
+    margin: 0px 10%;
+    border-bottom: 1px solid var(--Grayish-blue);
+    padding: 0px 10px;
+    padding-bottom: 10px;
+
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+nav .one{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+nav .two{
+    display: flex;
+    align-items: center;
+    /*border: 1px solid green;*/
+    justify-content: space-between;
+    width: 10%;
+}
+
+.two .profile{
+    width: 60px;
+    height: 60px;
+}
+
+
+
+ul{
+    display: flex;
+    
+    width: 75%;
+    justify-content: space-between;
+    border-bottom: var(--Dark-grayish-blue);
+
+
+}
+
+ul li{
+    list-style: none;
+    
+}
+li a{
+    text-decoration: none;
+    color: var(--Dark-grayish-blue);
+}
+
+
+main{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    
+    width: 75vw;
+}
+#cart{
+  position: fixed;
+  right: 0;
+  top: 0;
+  background-color: var(--White);
+  padding-bottom: 10px;
+  border-radius: 20px;
+  display: none;
+  
+}
+.cart{
+    padding: 10px 15px;
+    margin: 10px;
+    border-bottom: 1px solid var(--Grayish-blue);
+}
+.subs{
+    display: flex;
+    padding: 5px 10px;
+    /*border: solid 1px red;*/
+    margin: 5px;
+}
+.subs h5{
+    color: var(--Black);
+    
+}
+
+.pic{
+    /*border: solid 1px red;*/
+    border-radius: 10px;
+    width: 60px;
+    height: 60px;
+    padding: 5px;
+}
+.fall{
+    /*border: solid 1px red;*/
+    width: 15px;
+    height: 20px;
+    margin: 10px 20px;
+    
+}
+.text{
+    border-radius: 10px;
+    font-family: font;
+    padding: 20px;
+    background-color: var(--Orange);
+    color: black;
+    font-weight: 700;
+    border: none;
+    width: 200px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50px;
+}
+
+
+.firstclass{
+    
+    width: 35%;
+}
+
+
+
+.firstclass .mainpic{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.secaltdiv{
+    display: flex;
+    width: 100%;
+    
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.smallpic{
+    width: 20%;
+    border-radius: 10px;
+}
+
+.secondpart{
+    width: 60%;
+    
+}
+
+.secondpart h4{
+    color: var(--Dark-grayish-blue);
+}
+
+.secondpart h1{
+    color: var(--Very-dark-blue);
+    width: 300px;
+}
+
+.secondpart p{
+    font-size: 0.9rem;
+    line-height: 25px;
+    color: var(--Dark-grayish-blue);
+}
+
+ .habibi{
+    font-size: 1rem;
+    background-color: var(--Very-dark-blue);
+    color: var(--Pale-orange);
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+s{
+    font-size: 0.9rem;
+    color: var(--Dark-grayish-blue);
+    margin-top: -15px;
+    margin-bottom: 40px;
+}
+.bottom{
+    display: flex;
+    flex-direction: column;
+}
+button{
+    border-radius: 10px;
+    font-family: font;
+    padding: 20px;
+    background-color: var(--Orange);
+    color: black;
+    font-weight: 700;
+    border: none;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button img{
+    margin-right: 5px;
+    filter: contrast(50);
+    width: 15px;
+    height: 15px;
+}
+
+.bottombottom{
+    display: flex;
+
+}
+
+
+.increment{
+    width: 100px;
+    margin-right: 10px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown:hover .dropbtn {
+   /* background-color: black; */
+  }
+
+  .dropdown-toggle {
+    cursor: pointer;
+  }

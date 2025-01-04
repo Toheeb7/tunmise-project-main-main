@@ -1,0 +1,48 @@
+*{
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: font;
+    src: url(./public/font/kSans.ttf);
+}
+
+:root{
+    --Orange: hsl(26, 100%, 55%);
+--Pale-orange: hsl(25, 100%, 94%);
+
+
+
+--Very-dark-blue: hsl(220, 13%, 13%);
+--Dark-grayish-blue: hsl(219, 9%, 45%);
+--Grayish-blue: hsl(220, 14%, 75%);
+--Light-grayish-blue: hsl(223, 64%, 98%);
+--White: hsl(0, 0%, 100%);
+--Black : hsl(0, 0%, 0%);
+
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+body{
+    font-family: font;
+}
+#maindiv{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    
+    width: 98vw;
+    height: 98vh;
+    /*border: solid 1px red;*/
+}
+.image{
+    padding: 30px 30px;
+}
+.firstdiv{
+    padding: 10px;
+}
+.thirdiv{
+    
+    /*border: solid 1px red;*/
+    
+}

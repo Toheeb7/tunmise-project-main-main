@@ -1,0 +1,148 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="stylesheet" href="./style.css">
+  <title>Frontend Mentor | E-commerce product page</title>
+  
+   
+
+
+</head>
+<body id="reap">
+<nav class="navbar">
+  <div class="one">
+    <img src="./public/images/logo.svg" alt="logo" class="logo">
+    <ul>
+      <li class="dropdown">
+        <a href="#Collections" class="dropbtn">Collections</a>
+        <div class="dropdown-content">
+          <a href="#">Sub-collection 1</a>
+          <a href="#">Sub-collection 2</a>
+          <a href="#">Sub-collection 3</a>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a href="#Men" class="dropbtn">Men</a>
+        <div class="dropdown-content">
+          <a href="#">Men's Shoes</a>
+          <a href="#">Men's Clothing</a>
+          <a href="#">Men's Accessories</a>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a href="#Women" class="dropbtn">Women</a>
+        <div class="dropdown-content">
+          <a href="#">Women's Shoes</a>
+          <a href="#">Women's Clothing</a>
+          <a href="#">Women's Accessories</a>
+        </div>
+      </li>
+      <li><a href="#About">About</a></li>
+      <li><a href="#Contact">Contact</a></li>
+    </ul>
+  </div>
+  <div class="two">
+    <img src="./public/images/icon-cart.svg" alt="cart">
+    <img src="./public/images/image-avatar.png" alt="profile" class="profile" >
+  </div>
+</nav>
+
+<div id="cart">
+  <div class="cart" style="font-weight: 900;">
+    Cart
+  </div>
+  <div class="subs">
+    <img class="pic" src="./images/image-product-1-thumbnail.jpg" alt="">
+    <h5> Fall Limited Edition Sneakers<br>
+      $125.00 * 3 $375.00
+    </h5>
+    <img class="fall" src="./images/icon-delete.svg" alt="">
+  </div>
+  <div class="text"  onclick="cart('remove')">
+    <h5>Checkout</h5>
+  </div>
+  
+
+</div>
+
+
+<main>
+
+  <div class="firstclass">
+    <div class="altdiv">
+      <img src="./images/image-product-1.jpg" alt="main" class="mainpic" id="mainpic">
+    </div>
+    <div class="secaltdiv" id="paraboi">
+      <img src="./images/image-product-1-thumbnail.jpg" onclick="changeimage(1)" alt="small" class="smallpic">
+      <img src="./images/image-product-2-thumbnail.jpg" onclick="changeimage(2)" alt="small" class="smallpic">
+      <img src="./images/image-product-3-thumbnail.jpg" onclick="changeimage(3)" alt="small" class="smallpic">
+      <img src="./images/image-product-4-thumbnail.jpg" onclick="changeimage(4)" alt="small" class="smallpic">
+    </div>
+  </div> 
+  <div class="secondpart">
+  
+    <h4>Sneaker Company</h4>
+    <h1>Fall Limited Edition Sneakers</h1> 
+    <p>These low-profile sneakers are your perfect casual wear<br> companion. Featuring a durable rubber outer sole, they’ll<br> withstand everything the weather can offer.</p>
+    <div class="bottom">
+      <h2>$125.00  <span class="habibi">50%</span></h2>
+      <s>$250.00</s>
+      <div class="bottombottom">
+        <div class="increment">
+          <img src="./images/icon-minus.svg" alt="minus" class="minus" onclick="decrement()">
+          <span id="counter">0</span>
+          <img src="./images/icon-plus.svg" alt="plus" class="plus" onclick="increment()">
+       
+        </div>
+        <button onclick="cart('add')" ><img src="./images/icon-cart.svg" alt="cart"  >Add to cart</button>
+      </div>
+    </div>
+  </div>
+</main>
+<script>
+  let counterValue = 0;
+
+  function updateCounter() {
+    document.getElementById('counter').innerText = counterValue;
+  }
+
+  function increment() {
+    counterValue++;
+    updateCounter();
+  }
+
+  function decrement() {
+    if (counterValue > 0) {
+      counterValue--;
+      updateCounter();
+    }
+  }
+  let mainpic = document.getElementById("mainpic");
+ /* const images= [] */
+
+  function cart(action) {
+   if(action==="add"){
+    document.getElementById("cart").style.display="block"
+   }
+   
+   if(action==="remove"){
+    document.getElementById("cart").style.display="none"
+   }
+  }
+  
+ 
+  
+  function changeimage(img) {
+    
+    if (img === 1) mainpic.src=("./images/image-product-1.jpg");
+    if (img === 2) mainpic.src =("./images/image-product-2.jpg") ;
+    if (img === 3) mainpic.src = ("./images/image-product-3.jpg");
+    if (img === 4) mainpic.src = ("./images/image-product-4.jpg");
+  }
+
+  updateCounter();
+</script>
+</body>
+</html>
