@@ -82,10 +82,10 @@
       <img src="./images/image-product-1.jpg" alt="main" class="mainpic" id="mainpic">
     </div>
     <div class="secaltdiv" id="paraboi">
-      <img src="./images/image-product-1-thumbnail.jpg" onclick="changeimage(1)" alt="small" class="smallpic">
-      <img src="./images/image-product-2-thumbnail.jpg" onclick="changeimage(2)" alt="small" class="smallpic">
-      <img src="./images/image-product-3-thumbnail.jpg" onclick="changeimage(3)" alt="small" class="smallpic">
-      <img src="./images/image-product-4-thumbnail.jpg" onclick="changeimage(4)" alt="small" class="smallpic">
+     <img src="./images/image-product-1.jpg" onclick="changeimage(1)" alt="small" class="smallpic">
+      <img src="./images/image-product-2.jpg" onclick="changeimage(2)" alt="small" class="smallpic">
+      <img src="./images/image-product-3.jpg" onclick="changeimage(3)" alt="small" class="smallpic">
+      <img src="./images/image-product-4.jpg" onclick="changeimage(4)" alt="small" class="smallpic">
     </div>
   </div> 
   <div class="secondpart">
@@ -108,7 +108,33 @@
     </div>
   </div>
 </main>
+
+
+<div class="subdiv">
+  <h1>You may also like...</h1>
+    <div class="fuck">
+   <div class="fast">
+     <img src="./images/download (4).jpeg" alt="">
+     <h4>Lorem, ipsum.</h4>
+     <h4>#5000</h4>
+   </div>
+   <div class="fast">
+    <img src="./images/download (5).jpeg" alt="">
+    <h4>Lorem, ipsum.</h4>
+    <h4>#5000</h4>
+  </div>
+  <div class="fast">
+    <img src="./images/download (6).jpeg" alt="">
+    <h4>Lorem, ipsum.</h4>
+    <h4>#5000</h4>
+  </div>
+    </div>
+
+</div>
 <script>
+    let images = ["./images/image-product-1.jpg", "./images/image-product-2.jpg", "./images/image-product-3.jpg", "./images/image-product-4.jpg" ]
+  /*let secaltdiv = document.getElementById("secaltdiv");
+  secaltdiv.innerHTML = <img src={images[0]} />*/
   let counterValue = 0;
   let chosenProduct = {
     name:"Fall Limited Edition Sneakers",
@@ -171,14 +197,14 @@
     document.getElementById("subs").innerHTML=""
   }
   
- 
+
   
   function changeimage(img) {
     
-    if (img === 1) mainpic.src=("./images/image-product-1.jpg");
-    if (img === 2) mainpic.src =("./images/image-product-2.jpg") ;
-    if (img === 3) mainpic.src = ("./images/image-product-3.jpg");
-    if (img === 4) mainpic.src = ("./images/image-product-4.jpg");
+    if (img === 1) mainpic.src=(images[0]);
+    if (img === 2) mainpic.src =(images[1]) ;
+    if (img === 3) mainpic.src = (images[2]);
+    if (img === 4) mainpic.src = (images[3]);
   }
 
   updateCounter();

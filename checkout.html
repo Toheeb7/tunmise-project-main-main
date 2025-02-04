@@ -4,10 +4,45 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Checkout Page</title>
-  <link rel="stylesheet" href="checkout.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  
+  <div class="checkout-container">
+    <h1>Checkout</h1>
+    <div class="checkout-content">
+      <!-- Product List -->
+      <div class="product-list">
+        <h2>Your Cart</h2>
+        <div class="product-item">
+          <img src="/tunmise-project-main-main/images/download (5).jpeg" alt="Running Shoes">
+          <div class="product-details">
+            <h3>Running Shoes</h3>
+            <p>Size: 10</p>
+            <p>Price: $50</p>
+          </div>
+          <input type="number" value="1" min="1" class="quantity">
+        </div>
+        <div class="product-item">
+          <img src="/tunmise-project-main-main/images/download (4).jpeg" alt="Casual Sneakers">
+          <div class="product-details">
+            <h3>Casual Sneakers</h3>
+            <p>Size: 9</p>
+            <p>Price: $40</p>
+          </div>
+          <input type="number" value="1" min="1" class="quantity">
+        </div>
+      </div>
+
+      <!-- Summary Section -->
+      <div class="order-summary">
+        <h2>Order Summary</h2>
+        <p>Subtotal: <span id="subtotal">$90</span></p>
+        <p>Shipping: <span id="shipping">$5</span></p>
+        <p>Total: <span id="total">$95</span></p>
+        <button id="checkout-button">Checkout</button>
+      </div>
+    </div>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
