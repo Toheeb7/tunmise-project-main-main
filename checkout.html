@@ -1,48 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Checkout Page</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+    <link rel="stylesheet" href="./checkout.css">
 </head>
 <body>
-  <div class="checkout-container">
-    <h1>Checkout</h1>
-    <div class="checkout-content">
-      <!-- Product List -->
-      <div class="product-list">
-        <h2>Your Cart</h2>
-        <div class="product-item">
-          <img src="/tunmise-project-main-main/images/download (5).jpeg" alt="Running Shoes">
-          <div class="product-details">
-            <h3>Running Shoes</h3>
-            <p>Size: 10</p>
-            <p>Price: $50</p>
+  <nav class="navbar">
+    <div class="one">
+      <img src="./public/images/logo.svg" alt="logo" class="logo">
+      <ul>
+        <li class="dropdown">
+          <a href="#Collections" class="dropbtn">Collections</a>
+          <div class="dropdown-content">
+            <a href="#">Sub-collection 1</a>
+            <a href="#">Sub-collection 2</a>
+            <a href="#">Sub-collection 3</a>
           </div>
-          <input type="number" value="1" min="1" class="quantity">
-        </div>
-        <div class="product-item">
-          <img src="/tunmise-project-main-main/images/download (4).jpeg" alt="Casual Sneakers">
-          <div class="product-details">
-            <h3>Casual Sneakers</h3>
-            <p>Size: 9</p>
-            <p>Price: $40</p>
+        </li>
+        <li class="dropdown">
+          <a href="#Men" class="dropbtn">Men</a>
+          <div class="dropdown-content">
+            <a href="#">Men's Shoes</a>
+            <a href="#">Men's Clothing</a>
+            <a href="#">Men's Accessories</a>
           </div>
-          <input type="number" value="1" min="1" class="quantity">
-        </div>
-      </div>
-
-      <!-- Summary Section -->
-      <div class="order-summary">
-        <h2>Order Summary</h2>
-        <p>Subtotal: <span id="subtotal">$90</span></p>
-        <p>Shipping: <span id="shipping">$5</span></p>
-        <p>Total: <span id="total">$95</span></p>
-        <button id="checkout-button">Checkout</button>
-      </div>
+        </li>
+        <li class="dropdown">
+          <a href="#Women" class="dropbtn">Women</a>
+          <div class="dropdown-content">
+            <a href="#">Women's Shoes</a>
+            <a href="#">Women's Clothing</a>
+            <a href="#">Women's Accessories</a>
+          </div>
+        </li>
+        <li><a href="#About">About</a></li>
+        <li><a href="#Contact">Contact</a></li>
+      </ul>
     </div>
-  </div>
-  <script src="script.js"></script>
+    <div class="two">
+      <img src="./public/images/icon-cart.svg" alt="cart">
+      <img src="./public/images/image-avatar.png" alt="profile" class="profile" >
+    </div>
+  </nav>
+  <div class="container">
+        <h2>Sneaker Company</h2>
+        
+        <div class="input-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Enter your full name">
+        </div>
+        
+        <div class="input-group">
+            <label for="address">Address</label>
+            <input type="text" id="address" placeholder="Enter your address">
+        </div>
+        
+        <div class="input-group">
+            <label for="payment">Payment Method</label>
+            <select id="payment">
+                <option value="Credit Card">Credit Card</option>
+                <option value="PayPal">PayPal</option>
+                <option value="Bank Transfer">Bank Transfer</option>
+            </select>
+        </div>
+        
+        <div class="summary">
+            <h4> Revolution X1 Sneakers – Where Comfort Meets Style </h4>
+            <p>Product: <strong>Sneakers</strong></p>
+            <p>Price: <strong>$250</strong></p>
+            <p>Payment Method: <span id="selected-payment">Credit Card</span></p>
+        </div>
+        
+        <button class="rad" onclick="submitOrder()">Place Order</button>
+    </div>
+    
+    <script>
+        document.getElementById("payment").addEventListener("change", function() {
+            document.getElementById("selected-payment").textContent = this.value;
+        });
+
+        function submitOrder() {
+            const name = document.getElementById("name").value;
+            const address = document.getElementById("address").value;
+            const payment = document.getElementById("payment").value;
+            
+            if (name === "" || address === "") {
+                alert("Please fill in all details");
+                return;
+            }
+            
+            alert(`Order placed successfully!\nName: ${name}\nAddress: ${address}\nPayment: ${payment}`);
+        }
+    </script>
 </body>
 </html>

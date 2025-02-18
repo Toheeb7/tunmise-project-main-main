@@ -61,7 +61,7 @@
     <img class="fall" src="./images/icon-delete.svg" alt=""> -->
   </div>
   <div class="text"  onclick="cart('remove')">
-    <a href="/tunmise-project-main-main/checkout.html" >
+    <a href="/checkout.html" >
       Checkout
     </a>
   </div>
@@ -74,40 +74,112 @@
 
 </div>
 
+<div id="display">
 
-<main>
 
-  <div class="firstclass">
-    <div class="altdiv">
-      <img src="./images/image-product-1.jpg" alt="main" class="mainpic" id="mainpic">
-    </div>
-    <div class="secaltdiv" id="paraboi">
-     <img src="./images/image-product-1.jpg" onclick="changeimage(1)" alt="small" class="smallpic">
-      <img src="./images/image-product-2.jpg" onclick="changeimage(2)" alt="small" class="smallpic">
-      <img src="./images/image-product-3.jpg" onclick="changeimage(3)" alt="small" class="smallpic">
-      <img src="./images/image-product-4.jpg" onclick="changeimage(4)" alt="small" class="smallpic">
-    </div>
-  </div> 
-  <div class="secondpart">
-  
-    <h4>Sneaker Company</h4>
-    <h1>Fall Limited Edition Sneakers</h1> 
-    <p>These low-profile sneakers are your perfect casual wear<br> companion. Featuring a durable rubber outer sole, they’ll<br> withstand everything the weather can offer.</p>
-    <div class="bottom">
-      <h2>$125.00  <span class="habibi">50%</span></h2>
-      <s>$250.00</s>
-      <div class="bottombottom">
-        <div class="increment">
-          <img src="./images/icon-minus.svg" alt="minus" class="minus" onclick="decrement()">
-          <span id="counter">0</span>
-          <img src="./images/icon-plus.svg" alt="plus" class="plus" onclick="increment()">
-       
+
+    <main class="middle">
+
+      <div class="firstclass">
+        <div class="altdiv">
+          <img src="./images/photo6.jpeg" alt="main" class="mainpic" id="setpic" >
         </div>
-        <button onclick="cart('add')" ><img src="./images/icon-cart.svg" alt="cart"  >Add to cart</button>
+        <div class="secaltdiv" id="paraboi">
+        <img src="./images/photo7.jpeg" onclick="image(1)" class="smallpic">
+          <img src="./images/photo8.jpeg" onclick="image(2)" class="smallpic">
+          <img src="./images/photo6.jpeg" onclick="image(3)" class="smallpic">
+          <img src="./images/image-product-4.jpg" onclick="image(4)" class="smallpic">
+        </div>
+      </div> 
+      <div class="secondpart">
+      
+        <h4>Sneaker Company</h4>
+        <h1>Revolution X1 Sneakers – Where Comfort Meets Style</h1> 
+        <p>Step up your sneaker game with the Revolution X1, the perfect blend of style,<br> comfort, and performance. Designed for everyday wear and built to withstand<br> everything the weather can offer.</p>
+        <div class="bottom">
+          <h2>$240.00  <span class="habibi">60%</span></h2>
+          <s>$400.00</s>
+          <div class="bottombottom">
+            <div class="increment">
+              <img src="./images/icon-minus.svg" alt="minus" class="minus" onclick="decrement('first')">
+              <span id="counter">0</span>
+              <img src="./images/icon-plus.svg" alt="plus" class="plus" onclick="increment('first')">
+          
+            </div>
+            <button onclick="cart('add', 'item1')" ><img src="./images/icon-cart.svg" alt="cart"  >Add to cart</button>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</main>
+    </main>
+
+    <main class="top">
+
+      <div class="firstclass">
+        <div class="altdiv">
+          <img src="./images/image-product-1.jpg" alt="main" class="mainpic" id="mainpic">
+        </div>
+        <div class="secaltdiv" id="paraboi">
+        <img src="./images/image-product-1.jpg" onclick="changeimage(1)" alt="small" class="smallpic">
+          <img src="./images/image-product-2.jpg" onclick="changeimage(2)" alt="small" class="smallpic">
+          <img src="./images/image-product-3.jpg" onclick="changeimage(3)" alt="small" class="smallpic">
+          <img src="./images/image-product-4.jpg" onclick="changeimage(4)" alt="small" class="smallpic">
+        </div>
+      </div> 
+      <div class="secondpart">
+      
+        <h4>Sneaker Company</h4>
+        <h1>Fall Limited Edition Sneakers</h1> 
+        <p>These low-profile sneakers are your perfect casual wear<br> companion. Featuring a durable rubber outer sole, they’ll<br> withstand everything the weather can offer.</p>
+        <div class="bottom">
+          <h2>$125.00  <span class="habibi">50%</span></h2>
+          <s>$250.00</s>
+          <div class="bottombottom">
+            <div class="increment">
+              <img src="./images/icon-minus.svg" alt="minus" class="minus" onclick="decrement('second')">
+              <span id="counter2">0</span>
+              <img src="./images/icon-plus.svg" alt="plus" class="plus" onclick="increment('second')">
+          
+            </div>
+            <button onclick="cart('add', 'item2')" ><img src="./images/icon-cart.svg" alt="cart"  >Add to cart</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <main>
+
+      <div class="firstclass">
+        <div class="altdiv">
+          <img src="./images/photo9.jpeg" alt="main" class="mainpic" id="changepic">
+        </div>
+        <div class="secaltdiv" id="paraboi">
+        <img src="./images/photo4.jpeg" onclick="change(1)" alt="small" class="smallpic">
+          <img src="./images/photo10.jpeg" onclick="change(2)" alt="small" class="smallpic">
+          <img src="./images/photo5.jpeg" onclick="change(3)" alt="small" class="smallpic">
+          <img src="./images/photo9.jpeg" onclick="change(4)" alt="small" class="smallpic">
+        </div>
+      </div> 
+      <div class="secondpart">
+      
+        <h4>Sneaker Company</h4>
+        <h1>Fall Limited Edition Sneakers</h1> 
+        <p>These low-profile sneakers are your perfect casual wear<br> companion. Featuring a durable rubber outer sole, they’ll<br> withstand everything the weather can offer.</p>
+        <div class="bottom">
+          <h2>$125.00  <span class="habibi">50%</span></h2>
+          <s>$250.00</s>
+          <div class="bottombottom">
+            <div class="increment">
+              <img src="./images/icon-minus.svg" alt="minus" class="minus" onclick="decrement()">
+              <span id="counter3">0</span>
+              <img src="./images/icon-plus.svg" alt="plus" class="plus" onclick="increment()">
+          
+            </div>
+            <button onclick="cart('add')" ><img src="./images/icon-cart.svg" alt="cart"  >Add to cart</button>
+          </div>
+        </div>
+      </div>
+    </main>
+</div>
 
 
 <div class="subdiv">
@@ -136,6 +208,8 @@
   /*let secaltdiv = document.getElementById("secaltdiv");
   secaltdiv.innerHTML = <img src={images[0]} />*/
   let counterValue = 0;
+  let counterValue2 = 0;
+  let counterValue3 = 0;
   let chosenProduct = {
     name:"Fall Limited Edition Sneakers",
     price:125,
@@ -143,23 +217,35 @@
     totalPrice: 0
   };
 
+  let cartItemImage = "";
   
 
-  document.getElementById("subs").innerHTML = `<div>
-    <img class="pic" src="./images/image-product-1-thumbnail.jpg" alt="" />
-    <h5>${chosenProduct.name}<br />
-      $${chosenProduct.price}.00 * ${chosenProduct.quantity} $${chosenProduct.totalPrice}.00
-    </h5>
-    <img class="fall" id="deletebutton" src="./images/icon-delete.svg" alt="" />
-    </div>`/**/
+  /**/
 
-  function updateCounter() {
-    document.getElementById('counter').innerText = counterValue;
+  function updateCounter(count) {
+    if(count==="first"){
+      document.getElementById('counter').innerText = counterValue;
+    }else if(count==="second"){
+      document.getElementById('counter2').innerText = counterValue2;
+    }else{
+      document.getElementById('counter3').innerText = counterValue3;
+    }
   }
+  /*function changeCounter() {
+    document.getElementById('count').innerText = countValue;
+  }*/
 
-  function increment() {
-    counterValue++;
-    updateCounter();
+  function increment(count) {
+    if(count ==="first"){
+      counterValue++;
+    } else if(count === "second"){
+      counterValue2++;
+    } else{
+      counterValue3++;
+    }
+    updateCounter(count);
+
+
     chosenProduct = {...chosenProduct, quantity:(chosenProduct.quantity)+1, totalPrice:((chosenProduct.price)*((chosenProduct.quantity)+1))}
     document.getElementById("subs").innerHTML = `<div>
     <img class="pic" src="./images/image-product-1-thumbnail.jpg" alt="" />
@@ -169,35 +255,60 @@
     <img class="fall" id="deletebutton" src="./images/icon-delete.svg" alt="" />
     </div>`
   }
-
-  const deletebutton = document.getElementById("deletebutton")
-  deletebutton.addEventListener("click", ()=>{
-    deleteProduct()
-  })
-  function decrement() {
-    if (counterValue > 0) {
+  
+ 
+  function decrement(count) {
+    if (counterValue > 0 || counterValue2 > 0 || counterValue3 > 0) {
+      if(count ==="first"){
       counterValue--;
-      updateCounter();
+    } else if(count === "second"){
+      counterValue2--;
+    } else{
+      counterValue3--;
+    }
+    updateCounter(count);
+
+
     }
   }
+
+
   let mainpic = document.getElementById("mainpic");
  /* const images= [] */
+ let setpic = document.getElementById("setpic");
 
-  function cart(action) {
+  function cart(action, item) {
    if(action==="add"){
     document.getElementById("cart").style.display="block"
+      if(item==="item1"){
+      cartItemImage = "./images/photo6.jpeg"
+      console.log(cartItemImage)
+    }else if(item==="item2"){
+      cartItemImage = "./images/image-product-1.jpg"
+      console.log(cartItemImage)
+    }
    }
    
    if(action==="remove"){
     document.getElementById("cart").style.display="none"
    }
+
+   document.getElementById("subs").innerHTML = `<div>
+    <img class="pic" src=${cartItemImage} alt="" />
+    <h5>${chosenProduct.name}<br />
+      $${chosenProduct.price}.00 * ${chosenProduct.quantity} $${chosenProduct.totalPrice}.00
+    </h5>
+    <img class="fall" id="deletebutton" src="./images/icon-delete.svg" alt="" />
+    </div>`
+
   }
 
   function deleteProduct (){
     document.getElementById("subs").innerHTML=""
   }
-  
 
+  let mains=["./images/photo7.jpeg","./images/photo8.jpeg","./images/photo6.jpeg","./images/image-product-4.jpg"]
+  let main=["./images/photo4.jpeg","./images/photo10.jpeg","./images/photo5.jpeg","./images/photo9.jpeg"]
   
   function changeimage(img) {
     
@@ -206,6 +317,23 @@
     if (img === 3) mainpic.src = (images[2]);
     if (img === 4) mainpic.src = (images[3]);
   }
+    
+  function image(img) {
+    
+    if (img === 1) setpic.src=(mains[0]);
+    if (img === 2) setpic.src =(mains[1]) ;
+    if (img === 3) setpic.src = (mains[2]);
+    if (img === 4) setpic.src = (mains[3]);
+  }
+function change(img) {
+  if (img === 1) changepic.src=(main[0]);
+    if (img === 2) changepic.src =(main[1]) ;
+    if (img === 3) changepic.src = (main[2]);
+    if (img === 4) changepic.src = (main[3]);
+
+  
+}
+
 
   updateCounter();
 </script>
