@@ -350,3 +350,93 @@ button img{
     padding: 10px;
     /*border: solid 1px red;*/
  }
+ @media (max-width: 1024px) {
+    nav {
+      margin: 0 5%;
+      padding: 0 10px 10px;
+    }
+    nav .one {
+      width: 55%;
+    }
+    nav .two {
+      width: 15%;
+    }
+    ul {
+      width: 80%;
+    }
+    main {
+      width: 85vw;
+      flex-direction: column;
+    }
+    .firstclass,
+    .secondpart {
+      width: 100%;
+    }
+    .secondpart h1 {
+      width: 100%;
+    }
+  }
+  
+  /* Mobile Devices */
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 0 5%;
+    }
+    nav .one,
+    nav .two {
+      width: 100%;
+      margin-bottom: 10px;
+      justify-content: space-between;
+    }
+    ul {
+      width: 100%;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0;
+    }
+    ul li {
+      margin: 5px 10px;
+    }
+    main {
+      width: 95vw;
+      flex-direction: column;
+    }
+    .text {
+      margin-left: 0;
+      width: 100%;
+      justify-content: center;
+    }
+    .subdiv {
+      width: 90vw;
+      margin-top: 100px;
+    }
+    .fast {
+      width: 80%;
+      margin: 10px auto;
+    }
+  }
+  
+  /* Smaller Mobile Devices */
+  @media (max-width: 480px) {
+    body {
+      padding: 0;
+    }
+    nav {
+      margin: 0 2%;
+      padding: 0 5px 10px;
+    }
+    .two .profile {
+      width: 50px;
+      height: 50px;
+    }
+    .secondpart h1 {
+      font-size: 1.2rem;
+    }
+    button {
+      width: 90%;
+      padding: 15px;
+      font-size: 0.9rem;
+    }
+  }
