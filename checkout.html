@@ -9,8 +9,9 @@
 <body>
   <nav class="navbar">
     <div class="one">
+      <button class="hamburger" id="hamburger">&#9776;</button>
       <img src="./public/images/logo.svg" alt="logo" class="logo">
-      <ul>
+      <ul class="nav-links" id="nav-links">
         <li class="dropdown">
           <a href="#Collections" class="dropbtn">Collections</a>
           <div class="dropdown-content">
@@ -41,9 +42,10 @@
     </div>
     <div class="two">
       <img src="./public/images/icon-cart.svg" alt="cart">
-      <img src="./public/images/image-avatar.png" alt="profile" class="profile" >
+      <img src="./public/images/image-avatar.png" alt="profile" class="profile">
     </div>
   </nav>
+  
   <div class="container">
         <h2>Sneaker Company</h2>
         
@@ -66,21 +68,35 @@
             </select>
         </div>
         
-        <div class="summary">
-            <h4> Revolution X1 Sneakers – Where Comfort Meets Style </h4>
+        <div class="summary" id="summary">
+            <!--<h4> Revolution X1 Sneakers – Where Comfort Meets Style </h4>
             <p>Product: <strong>Sneakers</strong></p>
             <p>Price: <strong>$250</strong></p>
-            <p>Payment Method: <span id="selected-payment">Credit Card</span></p>
+            <p>Payment Method: <span id="selected-payment">Credit Card</span></p>-->
         </div>
         
         <button class="rad" onclick="submitOrder()">Place Order</button>
     </div>
     
     <script>
+      const gottenProducts = JSON.parse(localStorage.getItem("products"))
         document.getElementById("payment").addEventListener("change", function() {
             document.getElementById("selected-payment").textContent = this.value;
         });
-
+        const summary = document.getElementById("summary")
+        const mappedProducts = gottenProducts.map(item=>{
+          return `<div>
+            <h4> ${item.name} </h4>
+            <p>Product: <strong>Sneakers</strong></p>
+            <p>Price: <strong>$${item.totalPrice}</strong></p>
+            <p>Payment Method: <span id="selected-payment">Credit Card</span></p>
+            </div>`
+        }).join(" ")
+        summary.innerHTML = mappedProducts
+       /* summary.innerHTML = `<h4> ${gottenProduct.name} </h4>
+            <p>Product: <strong>Sneakers</strong></p>
+            <p>Price: <strong>$${gottenProduct.totalPrice}</strong></p>
+            <p>Payment Method: <span id="selected-payment">Credit Card</span></p>`*/
         function submitOrder() {
             const name = document.getElementById("name").value;
             const address = document.getElementById("address").value;
@@ -93,6 +109,11 @@
             
             alert(`Order placed successfully!\nName: ${name}\nAddress: ${address}\nPayment: ${payment}`);
         }
+        document.getElementById("hamburger").addEventListener("click", function () {
+  document.getElementById("nav-links").classList.toggle("show");
+});
+
+        
     </script>
 </body>
 </html>

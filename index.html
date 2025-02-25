@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Frontend Mentor | E-commerce product page</title>
   
    
@@ -11,54 +12,58 @@
 
 </head>
 <body id="reap">
-<nav class="navbar">
-  <div class="one">
-    <img src="./public/images/logo.svg" alt="logo" class="logo">
-    <ul>
-      <li class="dropdown">
-        <a href="#Collections" class="dropbtn">Collections</a>
-        <div class="dropdown-content">
-          <a href="#">Sub-collection 1</a>
-          <a href="#">Sub-collection 2</a>
-          <a href="#">Sub-collection 3</a>
-        </div>
-      </li>
-      <li class="dropdown">
-        <a href="#Men" class="dropbtn">Men</a>
-        <div class="dropdown-content">
-          <a href="#">Men's Shoes</a>
-          <a href="#">Men's Clothing</a>
-          <a href="#">Men's Accessories</a>
-        </div>
-      </li>
-      <li class="dropdown">
-        <a href="#Women" class="dropbtn">Women</a>
-        <div class="dropdown-content">
-          <a href="#">Women's Shoes</a>
-          <a href="#">Women's Clothing</a>
-          <a href="#">Women's Accessories</a>
-        </div>
-      </li>
-      <li><a href="#About">About</a></li>
-      <li><a href="#Contact">Contact</a></li>
-    </ul>
-  </div>
-  <div class="two">
-    <img src="./public/images/icon-cart.svg" alt="cart">
-    <img src="./public/images/image-avatar.png" alt="profile" class="profile" >
-  </div>
-</nav>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo-menu">
+        <button class="hamburger" id="hamburger">
+          &#9776;
+        </button>
+        <img src="./public/images/logo.svg" alt="logo" class="logo">
+      </div>
+  
+      <ul class="nav-links" id="nav-links">
+        <li class="dropdown">
+          <a href="#Collections" class="dropbtn">Collections</a>
+          <div class="dropdown-content">
+            <a href="#">Sub-collection 1</a>
+            <a href="#">Sub-collection 2</a>
+            <a href="#">Sub-collection 3</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="#Men" class="dropbtn">Men</a>
+          <div class="dropdown-content">
+            <a href="#">Men's Shoes</a>
+            <a href="#">Men's Clothing</a>
+            <a href="#">Men's Accessories</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="#Women" class="dropbtn">Women</a>
+          <div class="dropdown-content">
+            <a href="#">Women's Shoes</a>
+            <a href="#">Women's Clothing</a>
+            <a href="#">Women's Accessories</a>
+          </div>
+        </li>
+        <li><a href="#About">About</a></li>
+        <li><a href="#Contact">Contact</a></li>
+      </ul>
+  
+      <div class="nav-icons">
+        <img src="./public/images/icon-cart.svg" alt="cart">
+        <img src="./public/images/image-avatar.png" alt="profile" class="profile">
+      </div>
+    </div>
+  </nav>
+  
 
 <div id="cart">
   <div class="cart" style="font-weight: 900;">
     Cart
   </div>
   <div class="subs" id="subs">
-   <!-- <img class="pic" src="./images/image-product-1-thumbnail.jpg" alt="">
-    <h5> Fall Limited Edition Sneakers<br>
-      $125.00 * 3 $375.00
-    </h5>
-    <img class="fall" src="./images/icon-delete.svg" alt=""> -->
+   
   </div>
   <div class="text"  onclick="cart('remove')">
     <a href="/checkout.html" >
@@ -66,11 +71,6 @@
     </a>
   </div>
   
-
-</div>
-
-<div id="miss">
-  <a href="./checkout.html"></a>
 
 </div>
 
@@ -106,7 +106,7 @@
               <img src="./images/icon-plus.svg" alt="plus" class="plus" onclick="increment('first')">
           
             </div>
-            <button onclick="cart('add', 'item1')" ><img src="./images/icon-cart.svg" alt="cart"  >Add to cart</button>
+            <button onclick="/*cart('add', 'item1')*/cart('item1')" ><img src="./images/icon-cart.svg" alt="cart"  >Add to cart</button>
           </div>
         </div>
       </div>
@@ -140,7 +140,7 @@
               <img src="./images/icon-plus.svg" alt="plus" class="plus" onclick="increment('second')">
           
             </div>
-            <button onclick="cart('add', 'item2')" ><img src="./images/icon-cart.svg" alt="cart"  >Add to cart</button>
+            <button onclick="/*cart('add', 'item2')*/cart('item2')" ><img src="./images/icon-cart.svg" alt="cart"  >Add to cart</button>
           </div>
         </div>
       </div>
@@ -174,7 +174,7 @@
               <img src="./images/icon-plus.svg" alt="plus" class="plus" onclick="increment()">
           
             </div>
-            <button onclick="cart('add')" ><img src="./images/icon-cart.svg" alt="cart"  >Add to cart</button>
+            <button onclick="/*cart('add')*/cart('item3')" ><img src="./images/icon-cart.svg" alt="cart"  >Add to cart</button>
           </div>
         </div>
       </div>
@@ -207,28 +207,184 @@
     let images = ["./images/image-product-1.jpg", "./images/image-product-2.jpg", "./images/image-product-3.jpg", "./images/image-product-4.jpg" ]
   /*let secaltdiv = document.getElementById("secaltdiv");
   secaltdiv.innerHTML = <img src={images[0]} />*/
+ 
   let counterValue = 0;
   let counterValue2 = 0;
   let counterValue3 = 0;
-  let chosenProduct = {
+ 
+  /*let chosenProduct = {
+    name:"Revolution X1 Sneakers",
+    price:125,
+    quantity:0,
+    totalPrice: 0,
+    image:"",
+  };*/
+
+  let allOrders = []
+ /* const gottenProducts = JSON.parse(localStorage.getItem("products"))
+  
+  if(gottenProducts){
+    allOrders = gottenProducts
+  }else{
+    allOrders = []
+  }*/
+
+let Item1 = {
+    name:"Revolution X1 Sneakers – Where Comfort Meets Style",
+    price:125,
+    quantity:0,
+    totalPrice: 0,
+    image:"./images/photo6.jpeg",
+}
+
+let Item2 = {
     name:"Fall Limited Edition Sneakers",
     price:125,
     quantity:0,
-    totalPrice: 0
-  };
+    totalPrice: 0,
+    image:"./images/image-product-1.jpg",
+}
 
-  let cartItemImage = "";
+let Item3 = {
+    name:"Fall Limited Edition Sneakers2010",
+    price:125,
+    quantity:0,
+    totalPrice: 0,
+    image:"./images/image-product-1.jpg",
+}
+
+function updateProducts(chosenProduct){
+  let isIn = false;
+  if(chosenProduct){
+   if(allOrders.length===0){
+      allOrders = [...allOrders, chosenProduct]
+    }
+
+    allOrders.forEach((item)=>{
+      if(item.name===chosenProduct.name){
+        isIn = true;
+      }
+    })
+    
+    if(isIn){
+      console.log("its in")
+    }else{
+      allOrders = [...allOrders, chosenProduct]
+    }
+    
+    /*else{
+      allOrders.forEach(item=>{
+      if(item.name===chosenProduct.name){
+        console.log("its here nigguh")
+      }else{
+        allOrders = [...allOrders, chosenProduct]
+      // console.log("ajksjkas")
+      }
+    })
+    }
+    //allOrders = [...allOrders, chosenProduct]*/
+  }
+  
+  const subs = document.getElementById("subs");
+  const cartItems = allOrders.map(item=>{
+  return `<div>
+    <img alt="pic" class="cartitemimage" src="${item.image}" />
+      <div>
+        <p>${item.name}</p>
+        <p>${item.price} x ${item.quantity} $${item.totalPrice}</p>
+      </div>
+    </div>`
+}).join(" ")
+subs.innerHTML = cartItems
+localStorage.setItem("products", JSON.stringify(allOrders))
+}
+
+function cart(chosenItem){
+   document.getElementById("cart").style.display="block"
+  if(chosenItem==="item1"){
+    updateProducts(Item1)
+  }else if(chosenItem==="item2"){
+    updateProducts(Item2)
+  }else if(chosenItem==="item3"){
+    updateProducts(Item3)
+  }else{
+    console.log("lmao")
+  }
+
+}
+
+  //let cartItemImage = "";
   
 
   /**/
 
   function updateCounter(count) {
     if(count==="first"){
+         /* document.getElementById('counter').innerText = counterValue;
+     Item1 = {...Item1, quantity:counterValue, totalPrice: counterValue*Item1.price}*/
       document.getElementById('counter').innerText = counterValue;
+     let isIn = false;
+     allOrders.forEach(item=>{
+      if(item.name===Item1.name){
+        isIn = true
+      }else{
+        return item
+      }
+     })
+     if(isIn){
+      allOrders = allOrders.map(item=>{
+        if(item.name === Item1.name){
+          return {...item, quantity:counterValue, totalPrice:counterValue*item.price}
+        }else{
+          return item
+        }
+      })
+     }else{
+     
+     Item1 = {...Item1, quantity:counterValue, totalPrice: counterValue*Item1.price}
+     }
     }else if(count==="second"){
       document.getElementById('counter2').innerText = counterValue2;
+      let isIn = false;
+     allOrders.forEach(item=>{
+      if(item.name===Item2.name){
+        isIn = true
+      }else{
+        return item
+      }
+     })
+     if(isIn){
+      allOrders = allOrders.map(item=>{
+        if(item.name === Item2.name){
+          return {...item, quantity:counterValue2, totalPrice:counterValue2*item.price}
+        }else{
+          return item
+        }
+      })
+     }else{
+     Item2 = {...Item2, quantity:counterValue2, totalPrice: counterValue2*Item2.price}
+     }
     }else{
       document.getElementById('counter3').innerText = counterValue3;
+      let isIn = false;
+     allOrders.forEach(item=>{
+      if(item.name===Item3.name){
+        isIn = true
+      }else{
+        return item
+      }
+     })
+     if(isIn){
+      allOrders = allOrders.map(item=>{
+        if(item.name === Item3.name){
+          return {...item, quantity:counterValue3, totalPrice:counterValue3*item.price}
+        }else{
+          return item
+        }
+      })
+     }else{
+     Item3 = {...Item3, quantity:counterValue3, totalPrice: counterValue3*Item3.price}
+     }
     }
   }
   /*function changeCounter() {
@@ -246,14 +402,14 @@
     updateCounter(count);
 
 
-    chosenProduct = {...chosenProduct, quantity:(chosenProduct.quantity)+1, totalPrice:((chosenProduct.price)*((chosenProduct.quantity)+1))}
+    /*chosenProduct = {...chosenProduct, quantity:(chosenProduct.quantity)+1, totalPrice:((chosenProduct.price)*((chosenProduct.quantity)+1))}
     document.getElementById("subs").innerHTML = `<div>
     <img class="pic" src="./images/image-product-1-thumbnail.jpg" alt="" />
     <h5>${chosenProduct.name}<br />
       $${chosenProduct.price}.00 * ${chosenProduct.quantity} $${chosenProduct.totalPrice}.00
     </h5>
     <img class="fall" id="deletebutton" src="./images/icon-delete.svg" alt="" />
-    </div>`
+    </div>`*/
   }
   
  
@@ -277,16 +433,27 @@
  /* const images= [] */
  let setpic = document.getElementById("setpic");
 
-  function cart(action, item) {
+
+
+  /*function cart(action, item) {
    if(action==="add"){
     document.getElementById("cart").style.display="block"
       if(item==="item1"){
       cartItemImage = "./images/photo6.jpeg"
       console.log(cartItemImage)
+      chosenProduct.name = "Revolution X1 Sneakers"
+      console.log(chosenProduct.name)
+      chosenProduct.price = 125
+      console.log(chosenProduct.price)
     }else if(item==="item2"){
       cartItemImage = "./images/image-product-1.jpg"
       console.log(cartItemImage)
+      chosenProduct.name = "Fall Limited Edition Sneakers"
+      console.log(chosenProduct.name)
+      chosenProduct.price= 125
+      console.log(chosenProduct.price)
     }
+    localStorage.setItem("product", JSON.stringify(chosenProduct))
    }
    
    if(action==="remove"){
@@ -301,7 +468,16 @@
     <img class="fall" id="deletebutton" src="./images/icon-delete.svg" alt="" />
     </div>`
 
-  }
+
+    document.getElementById("subs").innerHTML = `<div>
+    <img class="pic" src=${cartItemImage} alt="" />
+    <h5>${chosenProduct2.name}<br />
+      $${chosenProduct2.price}.00 * ${chosenProduct2.quantity} $${chosenProduct2.totalPrice}.00
+    </h5>
+    <img class="fall" id="deletebutton" src="./images/icon-delete.svg" alt="" />
+    </div>`
+
+  }*/
 
   function deleteProduct (){
     document.getElementById("subs").innerHTML=""
@@ -336,6 +512,12 @@ function change(img) {
 
 
   updateCounter();
+ 
+  document.getElementById("hamburger").addEventListener("click", function () {
+  document.getElementById("nav-links").classList.toggle("show");
+});
+
+
 </script>
 </body>
 </html>
